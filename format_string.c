@@ -8,7 +8,7 @@
  */
 void print_a_char(va_list args)
 {
-	int c;
+	char c;
 
 	c = va_arg(args, int);
 	_putchar(c);
@@ -22,12 +22,21 @@ void print_a_char(va_list args)
 void print_a_string(va_list args)
 {
 	char *str;
-	unsigned int index = 0;
+	int length, index;
 
 	str = va_arg(args, char *);
-	for (index = 0; index < _strlen(str); index++)
+	if (str == NULL)
 	{
-		_putchar(*(str + index));
+		str = "(null)";
+		length = _strlen(str);
+		for (index = 0; index < length; index++)
+			_putchar(*(str + index));
+	}
+	else
+	{
+		length = _strlen(str);
+		for (index = 0; index < length; index++)
+			_putchar(*(str + index));
 	}
 }
 

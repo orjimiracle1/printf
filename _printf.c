@@ -7,12 +7,13 @@
  */
 int _printf(const char *format, ...)
 {
-	int spec_index, index = 0, length = 0, found_match, n_of_loop = 4;
+	int spec_index, index = 0, length = 0, found_match, n_of_loop = 5;
 
 	find_function spec[] = {
 
 	    {"%c", print_a_char}, {"%s", print_a_string}, {"%%", print_a_percent},
-	    {"%d", print_a_decimal}, {"%i", print_an_integer}};
+	    {"%d", print_a_decimal}, {"%i", print_an_integer}, {"%b", print_a_binary}
+	};
 
 	va_list args;
 

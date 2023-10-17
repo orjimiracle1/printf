@@ -33,5 +33,8 @@ int print_an_integer(va_list args);
 int print_an_integer_rec(int number);
 int print_a_binary(va_list args);
 int print_a_binary_rec(unsigned int number);
+int print_custom_string(va_list args);
+int print_escape_char(char escape_c);
+int print_hex(int number);
 
 #endif

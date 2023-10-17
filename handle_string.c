@@ -8,12 +8,12 @@
 int print_a_string(va_list args)
 {
 	int index, length;
-	char *string;
+	char *string, *empty = "(null)";
 
 	string = va_arg(args, char *);
 	if (string == NULL)
 	{
-		string = "(null)";
+		string = empty;
 		length = _strlen(string);
 		for (index = 0; index < length; index++)
 			_putchar(*(string + index));

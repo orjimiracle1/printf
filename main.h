@@ -27,6 +27,9 @@ int print_a_string(va_list args);
 int print_a_percent(void);
 int _putchar(char c);
 int _strlen(char *str);
-int _strlenconst(const char *str);
+int print_a_decimal(va_list args);
+int print_a_decimal_rec(int number);
+int print_an_integer(va_list args);
+int print_an_integer_rec(int number);
 
 #endif

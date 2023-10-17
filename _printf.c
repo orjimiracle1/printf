@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - The function implements the functionality of printf
  * @format: The format of the input to be formatted
@@ -6,11 +7,12 @@
  */
 int _printf(const char *format, ...)
 {
-	int spec_index, index = 0, length = 0, found_match;
+	int spec_index, index = 0, length = 0, found_match, n_of_loop = 4;
 
 	find_function spec[] = {
 
-	    {"%c", print_a_char}, {"%s", print_a_string}, {"%%", print_a_percent}};
+	    {"%c", print_a_char}, {"%s", print_a_string}, {"%%", print_a_percent},
+	    {"%d", print_a_decimal}, {"%i", print_an_integer}};
 
 	va_list args;
 
@@ -20,7 +22,7 @@ int _printf(const char *format, ...)
 
 	while (*(format + index) != '\0')
 	{
-		spec_index = 2;
+		spec_index = n_of_loop;
 		found_match = 0;
 		while (spec_index >= 0)
 		{
@@ -44,4 +46,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (length);
 }
-

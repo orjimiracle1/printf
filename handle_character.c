@@ -4,7 +4,7 @@
 /**
  * print_a_char - The function that prints a character
  * @args: The variable number of argumnets
- * Return: Nothing
+ * Return: Number of character printed to the STDOUT
  */
 int print_a_char(va_list args)
 {
